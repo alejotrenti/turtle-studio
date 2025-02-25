@@ -1,6 +1,6 @@
-<nav id="navbar" class="fixed top-0 w-full bg-transparent lg:bg-opacity-70 px-6 sm:px-80 py-4 flex justify-between items-center backdrop-blur-sm z-50 transition-all duration-300">
+<nav id="navbar" class="fixed top-0 w-full bg-transparent lg:bg-opacity-70 px-6 sm:px-80 py-4 lg:py-6 flex justify-between items-center backdrop-blur-sm z-50 transition-all duration-300">
     <!-- Logo -->
-    <img class="h-auto rounded-full w-28 pointer-events-none" src="/logo-pilates.png" alt="Logo">
+    <img id="logo" class="h-auto rounded-full w-28 pointer-events-none transition-all duration-300" src="/logo-pilates.png" alt="Logo">
 
     <!-- Dropdown para pantallas pequeñas -->
     <div class="lg:hidden">
@@ -19,30 +19,42 @@
             <li><a href="#contact" class="block hover:bg-darkGreen px-4 py-2 rounded-md">CONTACTO</a></li>
         </ul>
     </div>
-    <div class="hidden lg:flex gap-20">  
-        <a href="#hero" class="text-beige text-3xl font-semibold font-staat">INICIO</a>
-        <a href="#services" class="text-beige text-3xl font-semibold font-staat">SERVICIOS</a>
-        <a href="#contact" class="text-beige text-3xl font-semibold font-staat">CONTACTO</a>    
+
+    <!-- Links para pantallas grandes -->
+    <div class="hidden lg:flex gap-20">
+        <a href="#hero" class="text-beige text-3xl font-semibold font-staat transition-all duration-300">INICIO</a>
+        <a href="#services" class="text-beige text-3xl font-semibold font-staat transition-all duration-300">SERVICIOS</a>
+        <a href="#contact" class="text-beige text-3xl font-semibold font-staat transition-all duration-300">CONTACTO</a>
     </div>
 </nav>
 
 <script>
     const menuToggle = document.getElementById('mobile-menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');  
+    const mobileMenu = document.getElementById('mobile-menu');
     const navbar = document.getElementById('navbar');
+    const logo = document.getElementById('logo');
 
+    // Mostrar/ocultar menú móvil
     menuToggle.addEventListener('click', () => {
         mobileMenu.classList.toggle('hidden');
     });
 
-    // Función para mostrar fondo del navbar al hacer scroll
+    // Reducir tamaño del navbar al hacer scroll
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
+            navbar.classList.add('py-2');  // Reduce padding vertical
+            navbar.classList.remove('py-4', 'lg:py-6');
             navbar.classList.add('bg-mintGreen');
             navbar.classList.remove('bg-transparent');
+            logo.classList.add('w-20');  // Reduce logo size
+            logo.classList.remove('w-28');
         } else {
+            navbar.classList.remove('py-2');
+            navbar.classList.add('py-4', 'lg:py-6');
             navbar.classList.remove('bg-mintGreen');
             navbar.classList.add('bg-transparent');
+            logo.classList.add('w-28');
+            logo.classList.remove('w-20');
         }
     });
 </script>
