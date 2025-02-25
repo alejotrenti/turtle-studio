@@ -1,0 +1,43 @@
+---
+import Instagram from "./symbols/socialmedia/Instagram.astro";
+import Tiktok from "./symbols/socialmedia/Tiktok.astro";
+import Facebook from "./symbols/socialmedia/Facebook.astro";
+import Twitter from "./symbols/socialmedia/Twitter.astro";
+import Youtube from "./symbols/socialmedia/Youtube.astro";
+
+---
+
+<section id="footer" class="relative w-full bg-mintGreen py-16 text-beige">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-y-10 md:gap-x-20">
+        <!-- Logo -->
+        <div class="flex justify-center md:justify-start items-center">
+            <img src="logo-pilates.png" alt="Logo Pilates" class="w-52 md:w-72 h-auto rounded-full">
+        </div>
+
+        <!-- Información de contacto -->
+        <div class="text-center md:text-left">
+            <h3 class="text-2xl font-bold mb-4 text-chocolate">Contacto</h3>
+            <ul class="text-lg space-y-2">
+                <li class="hover:text-mintGreen">WHATSAPP</li>
+                <li class="hover:text-mintGreen">PROXIMAMENTE</li>
+            </ul>
+        </div>
+
+        <!-- Redes Sociales -->
+        <div class="text-center md:text-left">
+            <h3 class="text-2xl font-bold mb-4 text-chocolate">Síguenos en <span class="text-red-primary">Redes</span></h3>
+            <ul class="flex justify-center space-x-6 md:justify-start">
+                <li><a href="https://www.instagram.com/turtlestudio.ar/" class="hover:text-red-primary"><Instagram class="w-8 h-8 fill-white" /></a></li>
+                <li><a href="https://www.tiktok.com/@turtlestudio" class="hover:text-red-primary"><Tiktok class="w-8 h-8 fill-white" /></a></li>
+                <li><a href="https://www.facebook.com/turtlestudio.ar" class="hover:text-red-primary"><Facebook class="w-8 h-8 fill-white" /></a></li>
+            </ul>
+        </div>
+        
+        <!-- Horarios y ubicación -->
+        <div class="text-center md:text-left">
+            <h3 class="text-2xl font-bold mb-4 text-chocolate">Visítanos</h3>
+            <p class="text-lg">Estamos en la ciudad de Buenos Aires, <strong>Loma Hermosa</strong></p>
+        </div>
+    </div>
+</section>
+

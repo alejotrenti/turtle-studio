@@ -1,0 +1,55 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+import '@fontsource/lato'; /* Default weight 400 */
+import '@fontsource/lato/700.css'; /* Bold weight */
+import 'flowbite';
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Turtle Studio: Tu espacio de pilates para mejorar tu bienestar físico y mental. Clases personalizadas y ambiente acogedor." />
+		<meta name="keywords" content="pilates, Turtle Studio, clases de pilates, bienestar, ejercicio, pilates en [tu ciudad]" />
+		<meta name="author" content="Turtle Studio" />
+		<!-- Open Graph -->
+		<meta property="og:title" content="Turtle Studio - Clases de Pilates" />
+		<meta property="og:description" content="Mejora tu bienestar físico y mental con nuestras clases personalizadas de pilates." />
+		<meta property="og:image" content="/logo-pilates.png" />
+		<meta property="og:type" content="website" />
+
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Turtle Studio - Clases de Pilates" />
+		<meta name="twitter:description" content="Tu espacio para practicar pilates y mejorar tu bienestar físico y mental." />
+		<meta name="twitter:image" content="/logo-pilates.png" />
+
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/logo-pilates.png" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+		<script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@3.0.0/dist/flowbite.min.js"></script>
+	</body>
+</html>
+<style is:global>
+	
+	html {
+		font-family: 'Lato', sans-serif;
+		background: #F5EDE3;
+		scroll-behavior: smooth;
+		color: #fcfcfc;
+	}
+	body {
+		margin: 0;
+		padding: 0;
+	}
+	  scroll-behavior: smooth;
+
+</style>

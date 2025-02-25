@@ -1,0 +1,26 @@
+<section class="relative min-h-screen w-full bg-beige border-b-2 border-black" id="hero">
+  <!-- Fondo con imagen o video -->
+  <div class="absolute inset-0 overflow-hidden">
+    <video autoplay muted loop class="w-full h-full object-cover brightness-[0.3]">
+      <source src="/video.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <!-- Texto central -->
+  <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-8 z-20">
+    <h1 class="text-beige font-playfair lg:text-8xl text-5xl leading-tight drop-shadow-xl">
+      Despierta tu cuerpo,<br>
+      <span class="text-mintGreen">armoniza tu mente</span>
+    </h1>
+    <p class="mt-4 lg:text-3xl text-xl text-beige font-lato max-w-xl">
+      Clases de Pilates adaptadas a vos, solo en <span class="text-mintGreen">TURTLE STUDIO</span>.
+    </p>
+    <button
+      class="mt-10 bg-darkGreen text-beige font-semibold py-4 px-8 rounded-full hover:bg-mintGreen transition-all shadow-lg text-xl"
+      onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });"
+      aria-label="Reserva tu clase"
+    >
+      Reserva tu clase
+    </button>
+  </div>
+</section>

@@ -1,0 +1,40 @@
+---
+import Facebook from "./symbols/socialmedia/Facebook.astro";
+import Instagram from "./symbols/socialmedia/Instagram.astro";
+---
+
+<section id="contact" class="text-center w-full mt-10">
+    <div class="w-full h-auto bg-cover bg-bottom bg-no-repeat py-64 relative" style="background-image: url('/contact-back.jpg');">
+        <div class="absolute inset-0 bg-mintGreen bg-opacity-50 backdrop-blur-sm"></div>
+        <h1 class="text-8xl font-playfair text-beige relative z-10">Contacto</h1>
+    </div>
+    <div class="relative inset-0 -top-[80px] bg-mintGreen mx-auto max-w-7xl py-20 grid grid-cols-1 md:grid-cols-2 gap-8 px-20">
+        <section class="space-y-6 border-b-2 md:border-b-0 md:border-r-2 border-[#687459] pr-8 mx-auto md:pb-0 pb-10" >
+            <h2 class="text-5xl font-bold text-beige">Nuestras <span class="text-[#687459]">redes</span></h2>
+            <p class="text-xl text-beige">Enterate de todas nuestras novedades y promociones siguiéndonos en nuestras redes sociales.</p>
+    
+            <ul class="space-y-4">
+                <li class="inline-flex items-center">
+                    <Instagram class="size-14 mr-3 fill-[#687459]" />
+                    <a href="https://www.instagram.com/turtle.studio14/" class="block text-2xl text-chocolate hover:text-red-primary transition-all">@turtle.studio14</a>
+                </li>
+                <li class="inline-flex items-center">
+                    <Facebook class="size-14 mr-3 fill-[#687459]" />
+                    <a href="https://www.instagram.com/turtle.studio14/" class="block text-2xl text-chocolate hover:text-red-primary transition-all">Turtle Studio</a>
+                </li>
+                <li class="text-xl text-chocolate">
+                    <span class="font-semibold">Whatsapp:</span> PRÓXIMAMENTE
+                </li>
+            </ul>
+        </section>
+    
+        <section class="mx-auto md:pt-0">
+            <h2 class="text-4xl font-bold text-beige mb-4">¿Cómo puedo reservar una clase?</h2>
+            <p class= "md:px-16 mb-10 text-xl text-beige">Puedes reservar una clase a través de nuestro Instagram. Solo manda un mensaje consultando los horarios disponibles o chequea las historias destacadas.  </p>
+            <button class="mt-4 py-3 px-6 bg-[#687459] text-beige font-semibold rounded-full shadow-lg hover:bg-darkRed transition-all">
+                <a href="https://www.instagram.com/turtle.studio14/" class="w-full block text-center">Reserva en Instagram</a>
+            </button>
+        </section>
+    </div>
+    
+</section>
